@@ -2,6 +2,7 @@ describe("Zadanie test", () => {
   it("Test form", () => {
     // visit web and fill the form
     cy.visit("https://www.bart.sk/mam-zaujem");
+    
     cy.get('form[id="contant-form"]').contains(
       'div[id="form-group-name"]',
       "Vaše meno"
