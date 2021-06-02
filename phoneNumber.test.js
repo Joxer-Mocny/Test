@@ -19,3 +19,4 @@ describe("Check phoneNrsAreEqual function", () => {
     expect(phoneNrsAreEqual("0910233859", "+421910233859")).toBe(true);
   });
 });
+
