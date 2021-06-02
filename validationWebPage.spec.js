@@ -2,7 +2,7 @@ describe("Zadanie test", () => {
   it("Test form", () => {
     // visit web and fill the form
     cy.visit("https://www.bart.sk/mam-zaujem");
-    
+
     cy.get('form[id="contant-form"]').contains(
       'div[id="form-group-name"]',
       "Vaše meno"
@@ -32,17 +32,19 @@ describe("Zadanie test", () => {
       "Mám záujem o..."
     );
 
+    cy.get('input[value="Dizajn"]').click();
+
     cy.get('input[value="Programovanie"]').click();
 
-    cy.get('input[id="check"]').click();
+    cy.get('input[value="Online marketing"]').click();
 
-    cy.get('input[id="check"]').click();
+    cy.get('input[value="Webová a mobilná aplikácia"]').click();
 
-    cy.get('input[id="check"]').click();
+    cy.get('input[value="Internetový obchod"]').click();
 
-    cy.get('input[id="check"]').click();
+    cy.get('input[value="Web stránka"]').click();
 
-    cy.get('input[id="check"]').click();
+    cy.get('input[value="Redakčný systém"]').click();
 
     cy.get('form[id="contant-form"]').contains(
       'div[id="form-group-message"]',
