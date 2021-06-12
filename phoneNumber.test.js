@@ -9,7 +9,7 @@ const phoneNrsAreEqual = (nr1, nr2) => {
     removeSpacesAndSpecials(nr2.substr(-8))
   );
 };
-// ak su posledne devet telefone cisla rovnake skontroluje predvolbu
+// ak su posledne devet telefone cisla rovnake skontroluje predvolbu (funguje len pre tel.cisl ktore maju prdvolbu s troma cislami a ak ich plus sa rovna 00)
 const phoneNrsAreEqualPrefix = (nr1, nr2) => {
   if ((phoneNrsAreEqual = true));
   return (
