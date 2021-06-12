@@ -1,6 +1,6 @@
-//tato funkcia odstrani z telefonych cisel bodky, ciarky, medzery, pomlcky, podciarkovniky a lomitka
+//tato funkcia odstrani z telefonych cisel bodky, ciarky, medzery, pomlcky, podciarkovniky, lomitka,x a plus
 const removeSpacesAndSpecials = (str) => {
-  return (str = str.replace(/\s+[ - _ / . , ]/g, ""));
+  return (str = str.replace(/\s+[ - _ / . , + x]/g, ""));
 };
 //tato funkcia skontroluje poslednych 9 cisiel v telefonom cisle
 const phoneNrsAreEqual = (nr1, nr2) => {
@@ -259,6 +259,10 @@ it("Check prexif on landline number", () => {
 
 it("Check prexif on landline number", () => {
   expect(phoneNrsAreEqualPrefix("4556427269", "+1284556427269")).toBe(true);
+});
+//Zahranicne cisla mozu mat aj x v sebe tak este test aj s tym
+it("Check prexif on landline number", () => {
+  expect(phoneNrsAreEqualPrefix("1xx056556427269", "+86556427269")).toBe(true);
 });
 
 });
