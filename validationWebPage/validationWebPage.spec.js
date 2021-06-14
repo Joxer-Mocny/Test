@@ -38,6 +38,229 @@ describe("Test SK", () => {
       .should("have.attr", "style", "display: visible")
       .and("contains", "Ďakujem za vyplnenie žiadosti.");
   });
+  it("Test form submit with out dizajn", () => {
+    // submit form and check for errors
+
+    cy.get("#name").click().type("John Dove").blur();
+
+    cy.get("#company-name").click().type("Company").blur();
+
+    cy.get("#email").click().type("John.dove@compeny.com").blur();
+
+    cy.get("#tel").click().type("+4211111111111").blur();
+
+    cy.get('input[value="Programovanie"]').click();
+
+    cy.get('input[value="Online marketing"]').click();
+
+    cy.get('input[value="Webová a mobilná aplikácia"]').click();
+
+    cy.get('input[value="Elektronický obchod"]').click();
+
+    cy.get('input[value="Web stránka"]').click();
+
+    cy.get('input[value="Redakčný systém"]').click();
+
+    cy.get("#message").click().type("Testing").blur();
+
+    cy.get("#contact-submit").click();
+
+    cy.get('div[id="modal-overlay-contact-us"]', { timeout: 20000 })
+      .should("have.attr", "style", "display: visible")
+      .and("contains", "Ďakujem za vyplnenie žiadosti.");
+  });
+
+  it("Test form submit with out checkbox programovanie ", () => {
+    // submit form
+
+    cy.get("#name").click().type("John Dove").blur();
+
+    cy.get("#company-name").click().type("Company").blur();
+
+    cy.get("#email").click().type("John.dove@compeny.com").blur();
+
+    cy.get("#tel").click().type("+4211111111111").blur();
+
+    cy.get('input[value="Dizajn"]').click();
+
+    cy.get('input[value="Online marketing"]').click();
+
+    cy.get('input[value="Webová a mobilná aplikácia"]').click();
+
+    cy.get('input[value="Elektronický obchod"]').click();
+
+    cy.get('input[value="Web stránka"]').click();
+
+    cy.get('input[value="Redakčný systém"]').click();
+
+    cy.get("#message").click().type("Testing").blur();
+
+    cy.get("#contact-submit").click();
+
+    cy.get('div[id="modal-overlay-contact-us"]', { timeout: 20000 })
+      .should("have.attr", "style", "display: visible")
+      .and("contains", "Ďakujem za vyplnenie žiadosti.");
+  });
+
+  it("Test form submit with out checkbox online marketing ", () => {
+    // submit form
+
+    cy.get("#name").click().type("John Dove").blur();
+
+    cy.get("#company-name").click().type("Company").blur();
+
+    cy.get("#email").click().type("John.dove@compeny.com").blur();
+
+    cy.get("#tel").click().type("+4211111111111").blur();
+
+    cy.get('input[value="Dizajn"]').click();
+
+    cy.get('input[value="Programovanie"]').click();
+
+    cy.get('input[value="Webová a mobilná aplikácia"]').click();
+
+    cy.get('input[value="Elektronický obchod"]').click();
+
+    cy.get('input[value="Web stránka"]').click();
+
+    cy.get('input[value="Redakčný systém"]').click();
+
+    cy.get("#message").click().type("Testing").blur();
+
+    cy.get("#contact-submit").click();
+
+    cy.get('div[id="modal-overlay-contact-us"]', { timeout: 20000 })
+      .should("have.attr", "style", "display: visible")
+      .and("contains", "Ďakujem za vyplnenie žiadosti.");
+  });
+
+  it("Test form submit with out checkox webova a mobilna aplikacia ", () => {
+    // submit form
+
+    cy.get("#name").click().type("John Dove").blur();
+
+    cy.get("#company-name").click().type("Company").blur();
+
+    cy.get("#email").click().type("John.dove@compeny.com").blur();
+
+    cy.get("#tel").click().type("+4211111111111").blur();
+
+    cy.get('input[value="Dizajn"]').click();
+
+    cy.get('input[value="Programovanie"]').click();
+
+    cy.get('input[value="Online marketing"]').click();
+
+    cy.get('input[value="Elektronický obchod"]').click();
+
+    cy.get('input[value="Web stránka"]').click();
+
+    cy.get('input[value="Redakčný systém"]').click();
+
+    cy.get("#message").click().type("Testing").blur();
+
+    cy.get("#contact-submit").click();
+
+    cy.get('div[id="modal-overlay-contact-us"]', { timeout: 20000 })
+      .should("have.attr", "style", "display: visible")
+      .and("contains", "Ďakujem za vyplnenie žiadosti.");
+  });
+
+  it("Test form submit with out checkbox elektronicky obchod ", () => {
+    // submit form
+
+    cy.get("#name").click().type("John Dove").blur();
+
+    cy.get("#company-name").click().type("Company").blur();
+
+    cy.get("#email").click().type("John.dove@compeny.com").blur();
+
+    cy.get("#tel").click().type("+4211111111111").blur();
+
+    cy.get('input[value="Dizajn"]').click();
+
+    cy.get('input[value="Programovanie"]').click();
+
+    cy.get('input[value="Online marketing"]').click();
+
+    cy.get('input[value="Webová a mobilná aplikácia"]').click();
+
+    cy.get('input[value="Web stránka"]').click();
+
+    cy.get('input[value="Redakčný systém"]').click();
+
+    cy.get("#message").click().type("Testing").blur();
+
+    cy.get("#contact-submit").click();
+
+    cy.get('div[id="modal-overlay-contact-us"]', { timeout: 20000 })
+      .should("have.attr", "style", "display: visible")
+      .and("contains", "Ďakujem za vyplnenie žiadosti.");
+  });
+
+  it("Test form submit with out checkbox webstranka ", () => {
+    // submit form
+
+    cy.get("#name").click().type("John Dove").blur();
+
+    cy.get("#company-name").click().type("Company").blur();
+
+    cy.get("#email").click().type("John.dove@compeny.com").blur();
+
+    cy.get("#tel").click().type("+4211111111111").blur();
+
+    cy.get('input[value="Dizajn"]').click();
+
+    cy.get('input[value="Programovanie"]').click();
+
+    cy.get('input[value="Online marketing"]').click();
+
+    cy.get('input[value="Webová a mobilná aplikácia"]').click();
+
+    cy.get('input[value="Elektronický obchod"]').click();
+
+    cy.get('input[value="Redakčný systém"]').click();
+
+    cy.get("#message").click().type("Testing").blur();
+
+    cy.get("#contact-submit").click();
+
+    cy.get('div[id="modal-overlay-contact-us"]', { timeout: 20000 })
+      .should("have.attr", "style", "display: visible")
+      .and("contains", "Ďakujem za vyplnenie žiadosti.");
+  });
+
+  it("Test form submit with out checkbox redakcny system ", () => {
+    // submit form
+
+    cy.get("#name").click().type("John Dove").blur();
+
+    cy.get("#company-name").click().type("Company").blur();
+
+    cy.get("#email").click().type("John.dove@compeny.com").blur();
+
+    cy.get("#tel").click().type("+4211111111111").blur();
+
+    cy.get('input[value="Dizajn"]').click();
+
+    cy.get('input[value="Programovanie"]').click();
+
+    cy.get('input[value="Online marketing"]').click();
+
+    cy.get('input[value="Webová a mobilná aplikácia"]').click();
+
+    cy.get('input[value="Elektronický obchod"]').click();
+
+    cy.get('input[value="Web stránka"]').click();
+
+    cy.get("#message").click().type("Testing").blur();
+
+    cy.get("#contact-submit").click();
+
+    cy.get('div[id="modal-overlay-contact-us"]', { timeout: 20000 })
+      .should("have.attr", "style", "display: visible")
+      .and("contains", "Ďakujem za vyplnenie žiadosti.");
+  });
 
   it("Test form errors", () => {
     // submit form and check for errors
@@ -275,237 +498,6 @@ describe("Test SK", () => {
     );
   });
 
-  it("Test form errors with out dizajn", () => {
-    // submit form and check for errors
-
-    cy.get("#name").click().type("John Dove").blur();
-
-    cy.get("#company-name").click().type("Company").blur();
-
-    cy.get("#email").click().type("John.dove@compeny.com").blur();
-
-    cy.get("#tel").click().type("+4211111111111").blur();
-
-    cy.get('input[value="Programovanie"]').click();
-
-    cy.get('input[value="Online marketing"]').click();
-
-    cy.get('input[value="Webová a mobilná aplikácia"]').click();
-
-    cy.get('input[value="Elektronický obchod"]').click();
-
-    cy.get('input[value="Web stránka"]').click();
-
-    cy.get('input[value="Redakčný systém"]').click();
-
-    cy.get("#message").click().type("Testing").blur();
-
-    cy.get("#contact-submit").click();
-
-    cy.get('span[class="error-text"]').should(
-      "contain",
-      "Vyplňte prosím, o ktorú službu máte záujem"
-    );
-  });
-
-  it("Test form errors with out checkbox programovanie ", () => {
-    // submit form and check for errors
-
-    cy.get("#name").click().type("John Dove").blur();
-
-    cy.get("#company-name").click().type("Company").blur();
-
-    cy.get("#email").click().type("John.dove@compeny.com").blur();
-
-    cy.get("#tel").click().type("+4211111111111").blur();
-
-    cy.get('input[value="Dizajn"]').click();
-
-    cy.get('input[value="Online marketing"]').click();
-
-    cy.get('input[value="Webová a mobilná aplikácia"]').click();
-
-    cy.get('input[value="Elektronický obchod"]').click();
-
-    cy.get('input[value="Web stránka"]').click();
-
-    cy.get('input[value="Redakčný systém"]').click();
-
-    cy.get("#message").click().type("Testing").blur();
-
-    cy.get("#contact-submit").click();
-
-    cy.get('span[class="error-text"]').should(
-      "contain",
-      "Vyplňte prosím, o ktorú službu máte záujem"
-    );
-  });
-
-  it("Test form errors with out checkbox online marketing ", () => {
-    // submit form and check for errors
-
-    cy.get("#name").click().type("John Dove").blur();
-
-    cy.get("#company-name").click().type("Company").blur();
-
-    cy.get("#email").click().type("John.dove@compeny.com").blur();
-
-    cy.get("#tel").click().type("+4211111111111").blur();
-
-    cy.get('input[value="Dizajn"]').click();
-
-    cy.get('input[value="Programovanie"]').click();
-
-    cy.get('input[value="Webová a mobilná aplikácia"]').click();
-
-    cy.get('input[value="Elektronický obchod"]').click();
-
-    cy.get('input[value="Web stránka"]').click();
-
-    cy.get('input[value="Redakčný systém"]').click();
-
-    cy.get("#message").click().type("Testing").blur();
-
-    cy.get("#contact-submit").click();
-
-    cy.get('span[class="error-text"]').should(
-      "contain",
-      "Vyplňte prosím, o ktorú službu máte záujem"
-    );
-  });
-
-  it("Test form errors with out checkox webova a mobilna aplikacia ", () => {
-    // submit form and check for errors
-
-    cy.get("#name").click().type("John Dove").blur();
-
-    cy.get("#company-name").click().type("Company").blur();
-
-    cy.get("#email").click().type("John.dove@compeny.com").blur();
-
-    cy.get("#tel").click().type("+4211111111111").blur();
-
-    cy.get('input[value="Dizajn"]').click();
-
-    cy.get('input[value="Programovanie"]').click();
-
-    cy.get('input[value="Online marketing"]').click();
-
-    cy.get('input[value="Elektronický obchod"]').click();
-
-    cy.get('input[value="Web stránka"]').click();
-
-    cy.get('input[value="Redakčný systém"]').click();
-
-    cy.get("#message").click().type("Testing").blur();
-
-    cy.get("#contact-submit").click();
-
-    cy.get('span[class="error-text"]').should(
-      "contain",
-      "Vyplňte prosím, o ktorú službu máte záujem"
-    );
-  });
-
-  it("Test form errors with out checkbox elektronicky obchod ", () => {
-    // submit form and check for errors
-
-    cy.get("#name").click().type("John Dove").blur();
-
-    cy.get("#company-name").click().type("Company").blur();
-
-    cy.get("#email").click().type("John.dove@compeny.com").blur();
-
-    cy.get("#tel").click().type("+4211111111111").blur();
-
-    cy.get('input[value="Dizajn"]').click();
-
-    cy.get('input[value="Programovanie"]').click();
-
-    cy.get('input[value="Online marketing"]').click();
-
-    cy.get('input[value="Webová a mobilná aplikácia"]').click();
-
-    cy.get('input[value="Web stránka"]').click();
-
-    cy.get('input[value="Redakčný systém"]').click();
-
-    cy.get("#message").click().type("Testing").blur();
-
-    cy.get("#contact-submit").click();
-
-    cy.get('span[class="error-text"]').should(
-      "contain",
-      "Vyplňte prosím, o ktorú službu máte záujem"
-    );
-  });
-
-  it("Test form errors with out checkbox webstranka ", () => {
-    // submit form and check for errors
-
-    cy.get("#name").click().type("John Dove").blur();
-
-    cy.get("#company-name").click().type("Company").blur();
-
-    cy.get("#email").click().type("John.dove@compeny.com").blur();
-
-    cy.get("#tel").click().type("+4211111111111").blur();
-
-    cy.get('input[value="Dizajn"]').click();
-
-    cy.get('input[value="Programovanie"]').click();
-
-    cy.get('input[value="Online marketing"]').click();
-
-    cy.get('input[value="Webová a mobilná aplikácia"]').click();
-
-    cy.get('input[value="Elektronický obchod"]').click();
-
-    cy.get('input[value="Redakčný systém"]').click();
-
-    cy.get("#message").click().type("Testing").blur();
-
-    cy.get("#contact-submit").click();
-
-    cy.get('span[class="error-text"]').should(
-      "contain",
-      "Vyplňte prosím, o ktorú službu máte záujem"
-    );
-  });
-
-  it("Test form errors with out checkbox redakcny system ", () => {
-    // submit form and check for errors
-
-    cy.get("#name").click().type("John Dove").blur();
-
-    cy.get("#company-name").click().type("Company").blur();
-
-    cy.get("#email").click().type("John.dove@compeny.com").blur();
-
-    cy.get("#tel").click().type("+4211111111111").blur();
-
-    cy.get('input[value="Dizajn"]').click();
-
-    cy.get('input[value="Programovanie"]').click();
-
-    cy.get('input[value="Online marketing"]').click();
-
-    cy.get('input[value="Webová a mobilná aplikácia"]').click();
-
-    cy.get('input[value="Elektronický obchod"]').click();
-
-    cy.get('input[value="Web stránka"]').click();
-
-    cy.get("#message").click().type("Testing").blur();
-
-    cy.get("#contact-submit").click();
-
-    cy.get('span[class="error-text"]').should(
-      "contain",
-      "Vyplňte prosím, o ktorú službu máte záujem"
-    );
-  });
-
   it("Test form errors with out message", () => {
     // submit form and check for errors
 
@@ -671,7 +663,7 @@ describe("Test SK", () => {
     );
   });
 
-  it("Test form errors with  service", () => {
+  it("Test form errors with  Dizajn", () => {
     // submit form and check for errors
 
     cy.get('input[value="Dizajn"]').click();
@@ -704,7 +696,7 @@ describe("Test SK", () => {
     );
   });
 
-  it("Test form errors with service2", () => {
+  it("Test form errors with Programovanie", () => {
     // submit form and check for errors
 
     cy.get('input[value="Programovanie"]').click();
@@ -737,7 +729,7 @@ describe("Test SK", () => {
     );
   });
 
-  it("Test form errors with service3", () => {
+  it("Test form errors with Online marketing", () => {
     // submit form and check for errors
 
     cy.get('input[value="Online marketing"]').click();
@@ -770,7 +762,7 @@ describe("Test SK", () => {
     );
   });
 
-  it("Test form errors with service4", () => {
+  it("Test form errors with Webová a mobilná aplikácia", () => {
     // submit form and check for errors
 
     cy.get('input[value="Webová a mobilná aplikácia"]').click();
@@ -803,7 +795,7 @@ describe("Test SK", () => {
     );
   });
 
-  it("Test form errors with service5", () => {
+  it("Test form errors with Elektronický obchod", () => {
     // submit form and check for errors
 
     cy.get('input[value="Elektronický obchod"]').click();
@@ -836,7 +828,7 @@ describe("Test SK", () => {
     );
   });
 
-  it("Test form errors with service6", () => {
+  it("Test form errors with Web stránka", () => {
     // submit form and check for errors
 
     cy.get('input[value="Web stránka"]').click();
@@ -869,7 +861,7 @@ describe("Test SK", () => {
     );
   });
 
-  it("Test form errors with  service7", () => {
+  it("Test form errors with  Redakčný systém", () => {
     // submit form and check for errors
 
     cy.get('input[value="Redakčný systém"]').click();
@@ -974,7 +966,244 @@ describe("Test EN", () => {
 
     cy.get('div[id="modal-overlay-contact-us"]', { timeout: 20000 })
       .should("have.attr", "style", "display: visible")
-      .and("contains", "Ďakujem za vyplnenie žiadosti.");
+      .and("contains", "Thank you for your request.");
+  });
+
+  it("Test form submit with out dizajn", () => {
+    // submit form
+
+    cy.get("#name").click().type("John Dove").blur();
+
+    cy.get("#company-name").click().type("Company").blur();
+
+    cy.get("#email").click().type("John.dove@compeny.com").blur();
+
+    cy.get("#tel").click().type("+4211111111111").blur();
+
+    cy.get('input[value="Programovanie"]').click();
+
+    cy.get('input[value="Online marketing"]').click();
+
+    cy.get('input[value="Webová a mobilná aplikácia"]').click();
+
+    cy.get('input[value="Elektronický obchod"]').click();
+
+    cy.get('input[value="Web stránka"]').click();
+
+    cy.get('input[value="Redakčný systém"]').click();
+
+    cy.get("#message").click().type("Testing").blur();
+
+    cy.get("#contact-submit").click();
+
+    // check for successful modal popup
+
+    cy.get('div[id="modal-overlay-contact-us"]', { timeout: 20000 })
+      .should("have.attr", "style", "display: visible")
+      .and("contains", "Thank you for your request.");
+  });
+
+  it("Test form submit with out checkbox programovanie ", () => {
+    // submit form
+
+    cy.get("#name").click().type("John Dove").blur();
+
+    cy.get("#company-name").click().type("Company").blur();
+
+    cy.get("#email").click().type("John.dove@compeny.com").blur();
+
+    cy.get("#tel").click().type("+4211111111111").blur();
+
+    cy.get('input[value="Dizajn"]').click();
+
+    cy.get('input[value="Online marketing"]').click();
+
+    cy.get('input[value="Webová a mobilná aplikácia"]').click();
+
+    cy.get('input[value="Elektronický obchod"]').click();
+
+    cy.get('input[value="Web stránka"]').click();
+
+    cy.get('input[value="Redakčný systém"]').click();
+
+    cy.get("#message").click().type("Testing").blur();
+
+    cy.get("#contact-submit").click();
+
+    // check for successful modal popup
+
+    cy.get('div[id="modal-overlay-contact-us"]', { timeout: 20000 })
+      .should("have.attr", "style", "display: visible")
+      .and("contains", "Thank you for your request.");
+  });
+
+  it("Test form submit with out checkbox online marketing ", () => {
+    // submit form
+
+    cy.get("#name").click().type("John Dove").blur();
+
+    cy.get("#company-name").click().type("Company").blur();
+
+    cy.get("#email").click().type("John.dove@compeny.com").blur();
+
+    cy.get("#tel").click().type("+4211111111111").blur();
+
+    cy.get('input[value="Dizajn"]').click();
+
+    cy.get('input[value="Programovanie"]').click();
+
+    cy.get('input[value="Webová a mobilná aplikácia"]').click();
+
+    cy.get('input[value="Elektronický obchod"]').click();
+
+    cy.get('input[value="Web stránka"]').click();
+
+    cy.get('input[value="Redakčný systém"]').click();
+
+    cy.get("#message").click().type("Testing").blur();
+
+    cy.get("#contact-submit").click();
+
+    // check for successful modal popup
+
+    cy.get('div[id="modal-overlay-contact-us"]', { timeout: 20000 })
+      .should("have.attr", "style", "display: visible")
+      .and("contains", "Thank you for your request.");
+  });
+
+  it("Test form submit with out checkox webova a mobilna aplikacia ", () => {
+    // submit form
+
+    cy.get("#name").click().type("John Dove").blur();
+
+    cy.get("#company-name").click().type("Company").blur();
+
+    cy.get("#email").click().type("John.dove@compeny.com").blur();
+
+    cy.get("#tel").click().type("+4211111111111").blur();
+
+    cy.get('input[value="Dizajn"]').click();
+
+    cy.get('input[value="Programovanie"]').click();
+
+    cy.get('input[value="Online marketing"]').click();
+
+    cy.get('input[value="Elektronický obchod"]').click();
+
+    cy.get('input[value="Web stránka"]').click();
+
+    cy.get('input[value="Redakčný systém"]').click();
+
+    cy.get("#message").click().type("Testing").blur();
+
+    cy.get("#contact-submit").click();
+    // check for successful modal popup
+
+    cy.get('div[id="modal-overlay-contact-us"]', { timeout: 20000 })
+      .should("have.attr", "style", "display: visible")
+      .and("contains", "Thank you for your request.");
+  });
+
+  it("Test form submit with out checkbox elektronicky obchod ", () => {
+    // submit form
+
+    cy.get("#name").click().type("John Dove").blur();
+
+    cy.get("#company-name").click().type("Company").blur();
+
+    cy.get("#email").click().type("John.dove@compeny.com").blur();
+
+    cy.get("#tel").click().type("+4211111111111").blur();
+
+    cy.get('input[value="Dizajn"]').click();
+
+    cy.get('input[value="Programovanie"]').click();
+
+    cy.get('input[value="Online marketing"]').click();
+
+    cy.get('input[value="Webová a mobilná aplikácia"]').click();
+
+    cy.get('input[value="Web stránka"]').click();
+
+    cy.get('input[value="Redakčný systém"]').click();
+
+    cy.get("#message").click().type("Testing").blur();
+
+    cy.get("#contact-submit").click();
+
+    // check for successful modal popup
+
+    cy.get('div[id="modal-overlay-contact-us"]', { timeout: 20000 })
+      .should("have.attr", "style", "display: visible")
+      .and("contains", "Thank you for your request.");
+  });
+
+  it("Test form submit with out checkbox webstranka ", () => {
+    // submit form
+
+    cy.get("#name").click().type("John Dove").blur();
+
+    cy.get("#company-name").click().type("Company").blur();
+
+    cy.get("#email").click().type("John.dove@compeny.com").blur();
+
+    cy.get("#tel").click().type("+4211111111111").blur();
+
+    cy.get('input[value="Dizajn"]').click();
+
+    cy.get('input[value="Programovanie"]').click();
+
+    cy.get('input[value="Online marketing"]').click();
+
+    cy.get('input[value="Webová a mobilná aplikácia"]').click();
+
+    cy.get('input[value="Elektronický obchod"]').click();
+
+    cy.get('input[value="Redakčný systém"]').click();
+
+    cy.get("#message").click().type("Testing").blur();
+
+    cy.get("#contact-submit").click();
+
+    // check for successful modal popup
+
+    cy.get('div[id="modal-overlay-contact-us"]', { timeout: 20000 })
+      .should("have.attr", "style", "display: visible")
+      .and("contains", "Thank you for your request.");
+  });
+
+  it("Test form submit with out checkbox redakcny system ", () => {
+    // submit form
+
+    cy.get("#name").click().type("John Dove").blur();
+
+    cy.get("#company-name").click().type("Company").blur();
+
+    cy.get("#email").click().type("John.dove@compeny.com").blur();
+
+    cy.get("#tel").click().type("+4211111111111").blur();
+
+    cy.get('input[value="Dizajn"]').click();
+
+    cy.get('input[value="Programovanie"]').click();
+
+    cy.get('input[value="Online marketing"]').click();
+
+    cy.get('input[value="Webová a mobilná aplikácia"]').click();
+
+    cy.get('input[value="Elektronický obchod"]').click();
+
+    cy.get('input[value="Web stránka"]').click();
+
+    cy.get("#message").click().type("Testing").blur();
+
+    cy.get("#contact-submit").click();
+
+    // check for successful modal popup
+
+    cy.get('div[id="modal-overlay-contact-us"]', { timeout: 20000 })
+      .should("have.attr", "style", "display: visible")
+      .and("contains", "Thank you for your request.");
   });
 
   it("Test form errors", () => {
@@ -1207,237 +1436,6 @@ describe("Test EN", () => {
     );
   });
 
-  it("Test form errors with out dizajn", () => {
-    // submit form and check for errors
-
-    cy.get("#name").click().type("John Dove").blur();
-
-    cy.get("#company-name").click().type("Company").blur();
-
-    cy.get("#email").click().type("John.dove@compeny.com").blur();
-
-    cy.get("#tel").click().type("+4211111111111").blur();
-
-    cy.get('input[value="Programovanie"]').click();
-
-    cy.get('input[value="Online marketing"]').click();
-
-    cy.get('input[value="Webová a mobilná aplikácia"]').click();
-
-    cy.get('input[value="Elektronický obchod"]').click();
-
-    cy.get('input[value="Web stránka"]').click();
-
-    cy.get('input[value="Redakčný systém"]').click();
-
-    cy.get("#message").click().type("Testing").blur();
-
-    cy.get("#contact-submit").click();
-
-    cy.get('span[class="error-text"]').should(
-      "contain",
-      "Vyplňte prosím, o ktorú službu máte záujem"
-    );
-  });
-
-  it("Test form errors with out checkbox programovanie ", () => {
-    // submit form and check for errors
-
-    cy.get("#name").click().type("John Dove").blur();
-
-    cy.get("#company-name").click().type("Company").blur();
-
-    cy.get("#email").click().type("John.dove@compeny.com").blur();
-
-    cy.get("#tel").click().type("+4211111111111").blur();
-
-    cy.get('input[value="Dizajn"]').click();
-
-    cy.get('input[value="Online marketing"]').click();
-
-    cy.get('input[value="Webová a mobilná aplikácia"]').click();
-
-    cy.get('input[value="Elektronický obchod"]').click();
-
-    cy.get('input[value="Web stránka"]').click();
-
-    cy.get('input[value="Redakčný systém"]').click();
-
-    cy.get("#message").click().type("Testing").blur();
-
-    cy.get("#contact-submit").click();
-
-    cy.get('span[class="error-text"]').should(
-      "contain",
-      "Vyplňte prosím, o ktorú službu máte záujem"
-    );
-  });
-
-  it("Test form errors with out checkbox online marketing ", () => {
-    // submit form and check for errors
-
-    cy.get("#name").click().type("John Dove").blur();
-
-    cy.get("#company-name").click().type("Company").blur();
-
-    cy.get("#email").click().type("John.dove@compeny.com").blur();
-
-    cy.get("#tel").click().type("+4211111111111").blur();
-
-    cy.get('input[value="Dizajn"]').click();
-
-    cy.get('input[value="Programovanie"]').click();
-
-    cy.get('input[value="Webová a mobilná aplikácia"]').click();
-
-    cy.get('input[value="Elektronický obchod"]').click();
-
-    cy.get('input[value="Web stránka"]').click();
-
-    cy.get('input[value="Redakčný systém"]').click();
-
-    cy.get("#message").click().type("Testing").blur();
-
-    cy.get("#contact-submit").click();
-
-    cy.get('span[class="error-text"]').should(
-      "contain",
-      "Vyplňte prosím, o ktorú službu máte záujem"
-    );
-  });
-
-  it("Test form errors with out checkox webova a mobilna aplikacia ", () => {
-    // submit form and check for errors
-
-    cy.get("#name").click().type("John Dove").blur();
-
-    cy.get("#company-name").click().type("Company").blur();
-
-    cy.get("#email").click().type("John.dove@compeny.com").blur();
-
-    cy.get("#tel").click().type("+4211111111111").blur();
-
-    cy.get('input[value="Dizajn"]').click();
-
-    cy.get('input[value="Programovanie"]').click();
-
-    cy.get('input[value="Online marketing"]').click();
-
-    cy.get('input[value="Elektronický obchod"]').click();
-
-    cy.get('input[value="Web stránka"]').click();
-
-    cy.get('input[value="Redakčný systém"]').click();
-
-    cy.get("#message").click().type("Testing").blur();
-
-    cy.get("#contact-submit").click();
-
-    cy.get('span[class="error-text"]').should(
-      "contain",
-      "Vyplňte prosím, o ktorú službu máte záujem"
-    );
-  });
-
-  it("Test form errors with out checkbox elektronicky obchod ", () => {
-    // submit form and check for errors
-
-    cy.get("#name").click().type("John Dove").blur();
-
-    cy.get("#company-name").click().type("Company").blur();
-
-    cy.get("#email").click().type("John.dove@compeny.com").blur();
-
-    cy.get("#tel").click().type("+4211111111111").blur();
-
-    cy.get('input[value="Dizajn"]').click();
-
-    cy.get('input[value="Programovanie"]').click();
-
-    cy.get('input[value="Online marketing"]').click();
-
-    cy.get('input[value="Webová a mobilná aplikácia"]').click();
-
-    cy.get('input[value="Web stránka"]').click();
-
-    cy.get('input[value="Redakčný systém"]').click();
-
-    cy.get("#message").click().type("Testing").blur();
-
-    cy.get("#contact-submit").click();
-
-    cy.get('span[class="error-text"]').should(
-      "contain",
-      "Vyplňte prosím, o ktorú službu máte záujem"
-    );
-  });
-
-  it("Test form errors with out checkbox webstranka ", () => {
-    // submit form and check for errors
-
-    cy.get("#name").click().type("John Dove").blur();
-
-    cy.get("#company-name").click().type("Company").blur();
-
-    cy.get("#email").click().type("John.dove@compeny.com").blur();
-
-    cy.get("#tel").click().type("+4211111111111").blur();
-
-    cy.get('input[value="Dizajn"]').click();
-
-    cy.get('input[value="Programovanie"]').click();
-
-    cy.get('input[value="Online marketing"]').click();
-
-    cy.get('input[value="Webová a mobilná aplikácia"]').click();
-
-    cy.get('input[value="Elektronický obchod"]').click();
-
-    cy.get('input[value="Redakčný systém"]').click();
-
-    cy.get("#message").click().type("Testing").blur();
-
-    cy.get("#contact-submit").click();
-
-    cy.get('span[class="error-text"]').should(
-      "contain",
-      "Vyplňte prosím, o ktorú službu máte záujem"
-    );
-  });
-
-  it("Test form errors with out checkbox redakcny system ", () => {
-    // submit form and check for errors
-
-    cy.get("#name").click().type("John Dove").blur();
-
-    cy.get("#company-name").click().type("Company").blur();
-
-    cy.get("#email").click().type("John.dove@compeny.com").blur();
-
-    cy.get("#tel").click().type("+4211111111111").blur();
-
-    cy.get('input[value="Dizajn"]').click();
-
-    cy.get('input[value="Programovanie"]').click();
-
-    cy.get('input[value="Online marketing"]').click();
-
-    cy.get('input[value="Webová a mobilná aplikácia"]').click();
-
-    cy.get('input[value="Elektronický obchod"]').click();
-
-    cy.get('input[value="Web stránka"]').click();
-
-    cy.get("#message").click().type("Testing").blur();
-
-    cy.get("#contact-submit").click();
-
-    cy.get('span[class="error-text"]').should(
-      "contain",
-      "Vyplňte prosím, o ktorú službu máte záujem"
-    );
-  });
-
   it("Test form errors with out message", () => {
     // submit form and check for errors
 
@@ -1594,7 +1592,7 @@ describe("Test EN", () => {
     );
   });
 
-  it("Test form errors with service1", () => {
+  it("Test form errors with Dizajn", () => {
     // submit form and check for errors
 
     cy.get('input[value="Dizajn"]').click();
@@ -1624,7 +1622,7 @@ describe("Test EN", () => {
     );
   });
 
-  it("Test form errors with service2", () => {
+  it("Test form errors with Programovanie", () => {
     // submit form and check for errors
 
     cy.get('input[value="Programovanie"]').click();
@@ -1654,7 +1652,7 @@ describe("Test EN", () => {
     );
   });
 
-  it("Test form errors with service3", () => {
+  it("Test form errors with Online marketing", () => {
     // submit form and check for errors
 
     cy.get('input[value="Online marketing"]').click();
@@ -1684,7 +1682,7 @@ describe("Test EN", () => {
     );
   });
 
-  it("Test form errors with service4", () => {
+  it("Test form errors with Webová a mobilná aplikácia", () => {
     // submit form and check for errors
 
     cy.get('input[value="Webová a mobilná aplikácia"]').click();
@@ -1714,7 +1712,7 @@ describe("Test EN", () => {
     );
   });
 
-  it("Test form errors with service5", () => {
+  it("Test form errors with Elektronický obchod", () => {
     // submit form and check for errors
 
     cy.get('input[value="Elektronický obchod"]').click();
@@ -1744,7 +1742,7 @@ describe("Test EN", () => {
     );
   });
 
-  it("Test form errors with service6", () => {
+  it("Test form errors with Web stránka", () => {
     // submit form and check for errors
 
     cy.get('input[value="Web stránka"]').click();
@@ -1774,7 +1772,7 @@ describe("Test EN", () => {
     );
   });
 
-  it("Test form errors with  service7", () => {
+  it("Test form errors with  Redakčný systém", () => {
     // submit form and check for errors
 
     cy.get('input[value="Redakčný systém"]').click();
