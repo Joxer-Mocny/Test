@@ -972,9 +972,9 @@ describe("Test EN", () => {
 
     // check for successful modal popup
 
-      cy.get('div[id="modal-overlay-contact-us"]', { timeout: 20000 })
-        .should("have.attr", "style", "display: visible")
-        .and("contains", "Ďakujem za vyplnenie žiadosti.");
+    cy.get('div[id="modal-overlay-contact-us"]', { timeout: 20000 })
+      .should("have.attr", "style", "display: visible")
+      .and("contains", "Ďakujem za vyplnenie žiadosti.");
   });
 
   it("Test form errors", () => {
@@ -1563,8 +1563,6 @@ describe("Test EN", () => {
       "Please describe your project"
     );
   });
-
-  
 
   it("Test form errors with  phone number", () => {
     // submit form and check for errors
