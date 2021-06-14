@@ -9,7 +9,7 @@ const phoneNrsAreEqual = (nr1, nr2) => {
     removeSpacesAndSpecials(nr2.substr(-8))
   );
 };
-// ak su posledne devet telefone cisla rovnake skontroluje predvolbu (funguje len pre tel.cisl ktore maju predvolbu s troma cislami )
+// ak je poslednych devat cisel rovnakych skontroluje predvolbu (funguje len pre tel.cisl ktore maju predvolbu s troma cislami )
 const phoneNrsAreEqualPrefix = (nr1, nr2) => {
   if ((phoneNrsAreEqual = true));
   return (
@@ -205,6 +205,7 @@ describe("Check phoneNrsAreEqual function", () => {
     expect(phoneNrsAreEqual("0910/233 859", "0910_233-859")).toBe(true);
   });
 });
+
 //ak predosli test presiel tak skontroluje predvolby
 describe("Check phoneNrsAreEqualPrefix function", () => {
   it("Check prefix on mobile number", () => {
@@ -214,6 +215,7 @@ describe("Check phoneNrsAreEqualPrefix function", () => {
   it("Check prefix on mobile number", () => {
     expect(phoneNrsAreEqualPrefix("0910233859", "00421910233859")).toBe(true);
   });
+
   it("Check prefix on mobile number", () => {
     expect(phoneNrsAreEqualPrefix("00421910233859", "+421910233859")).toBe(
       true
@@ -234,37 +236,36 @@ describe("Check phoneNrsAreEqualPrefix function", () => {
     );
   });
 
-//Zahranicne cisla s 1 cislom ako predvolbou
-it("Check prexif on landline number", () => {
-  expect(phoneNrsAreEqualPrefix("8107556427269", "+7556427269")).toBe(true);
-});
+  //Zahranicne cisla s 1 cislom ako predvolbou
+  it("Check prexif on landline number", () => {
+    expect(phoneNrsAreEqualPrefix("8107556427269", "+7556427269")).toBe(true);
+  });
 
-it("Check prexif on landline number", () => {
-  expect(phoneNrsAreEqualPrefix("7556427269", "+7556427269")).toBe(true);
-});
+  it("Check prexif on landline number", () => {
+    expect(phoneNrsAreEqualPrefix("7556427269", "+7556427269")).toBe(true);
+  });
 
-//Zahranicne cisla s 2 cislom ako predvolbou
-it("Check prexif on landline number", () => {
-  expect(phoneNrsAreEqualPrefix("0086556427269", "+86556427269")).toBe(true);
-});
+  //Zahranicne cisla s 2 cislom ako predvolbou
+  it("Check prexif on landline number", () => {
+    expect(phoneNrsAreEqualPrefix("0086556427269", "+86556427269")).toBe(true);
+  });
 
-it("Check prexif on landline number", () => {
-  expect(phoneNrsAreEqualPrefix("6556427269", "+86556427269")).toBe(true);
-});
+  it("Check prexif on landline number", () => {
+    expect(phoneNrsAreEqualPrefix("6556427269", "+86556427269")).toBe(true);
+  });
 
-//Zahranicne cisla s 4 cislom ako predvolbou
-it("Check prexif on landline number", () => {
-  expect(phoneNrsAreEqualPrefix("0011284556427269", "+1284556427269")).toBe(true);
-});
+  //Zahranicne cisla s 4 cislom ako predvolbou
+  it("Check prexif on landline number", () => {
+    expect(phoneNrsAreEqualPrefix("0011284556427269", "+1284556427269")).toBe(true);
+  });
 
-it("Check prexif on landline number", () => {
-  expect(phoneNrsAreEqualPrefix("4556427269", "+1284556427269")).toBe(true);
-});
-//Zahranicne cisla mozu mat aj x v sebe tak este test aj s tym
-it("Check prexif on landline number", () => {
-  expect(phoneNrsAreEqualPrefix("1xx056556427269", "+86556427269")).toBe(true);
-});
-
+  it("Check prexif on landline number", () => {
+    expect(phoneNrsAreEqualPrefix("4556427269", "+1284556427269")).toBe(true);
+  });
+  //Zahranicne cisla mozu mat aj x v sebe tak este test aj s tym
+  it("Check prexif on landline number", () => {
+    expect(phoneNrsAreEqualPrefix("1xx056556427269", "+86556427269")).toBe(true);
+  });
 });
 
 // ak testy s pomlckami bodkami medzerami... presli na slovenskych cislach, budu fungovat aj na zahranicnych cislach.
