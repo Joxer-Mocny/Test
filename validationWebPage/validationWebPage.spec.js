@@ -4,7 +4,7 @@ describe("Test SK", () => {
   });
 
   it("Test form submit", () => {
-    // visit web and fill the form
+    // visit web and fill the form.
     cy.get("#form-group-name").contains("Vaše meno");
     cy.get("#name").click().type("John Dove").blur();
 
