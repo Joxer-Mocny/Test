@@ -1,4 +1,4 @@
-//funkcia na kontrolu cisiel bez predvolby
+//function for checking numbers without prefix 
 const removeSpacesAndSpecials = (str) => {
   return str.replace(/\s+[ - _ / . , + x]/g, "");
 };
@@ -10,7 +10,7 @@ const areNumbersEqual = (nr1, nr2) => {
   return numberWithoutSpecials1 === numberWithoutSpecials2;
 };
 
-//funkcia na kontrolu cisiel s predvolbou (1 cislo ako predvolba)
+//function for checking numbers with prefix (1 number and prefix)
 const removeSpacesAndSpecials = (str) => {
   return str.replace(/\s+[ - _ / . , + x]/g, "");
 };
@@ -22,7 +22,7 @@ const areNumbersEqual = (nr1, nr2) => {
   return numberWithoutSpecials1 === numberWithoutSpecials2;
 };
 
-//funkcia na kontrolu cisiel s predvolbou (2 cislo ako predvolba)
+//function for checking numbers with prefix (2 number and prefix)
 const removeSpacesAndSpecials = (str) => {
   return str.replace(/\s+[ - _ / . , + x]/g, "");
 };
@@ -34,7 +34,7 @@ const areNumbersEqual = (nr1, nr2) => {
   return numberWithoutSpecials1 === numberWithoutSpecials2;
 };
 
-//funkcia na kontrolu cisiel s predvolbou (3 cislo ako predvolba)
+//function for checking numbers with prefix (3 number and prefix)
 const removeSpacesAndSpecials = (str) => {
   return str.replace(/\s+[ - _ / . , + x]/g, "");
 };
@@ -46,7 +46,7 @@ const areNumbersEqual = (nr1, nr2) => {
   return numberWithoutSpecials1 === numberWithoutSpecials2;
 };
 
-//funkcia na kontrolu cisiel s predvolbou (4 cislo ako predvolba)
+//function for checking numbers with prefix (4 number and prefix)
 
 const removeSpacesAndSpecials = (str) => {
   return str.replace(/\s+[ - _ / . , + x]/g, "");
@@ -61,7 +61,7 @@ const areNumbersEqual = (nr1, nr2) => {
 
 //TEST
 
-//tento test skontroluje ci sa  cisla v zapise s bodkami, ciarkami, medzerami, pomlckami, podciarkovnikmi a lomitkami rovnaju.
+//the test checks that the numbers in the record with dots, commas, spaces, hyphens, underscores, and slashes are equal.
 describe("Check phoneNrsAreEqual function", () => {
   it("Check inequality landline number", () => {
     expect(phoneNrsAreEqual("0556427269", "0556427268")).toBe(false);
@@ -221,7 +221,7 @@ describe("Check phoneNrsAreEqual function", () => {
   });
 });
 
-//ak predosli test presiel tak skontroluje predvolby
+//if test pass it will check prefix on slovak numbers
 describe("Check phoneNrsAreEqualPrefix function", () => {
   it("Check prefix on mobile number", () => {
     expect(phoneNrsAreEqual("0910233859", "+421910233859")).toBe(true);
@@ -251,7 +251,7 @@ describe("Check phoneNrsAreEqualPrefix function", () => {
     );
   });
 
-  //Zahranicne cisla s 1 cislom ako predvolbou
+  //Test for foreign phonenumbers whit 1 numbers in prefix
   it("Check prexif on landline number", () => {
     expect(phoneNrsAreEqualPrefix("8107556427269", "+7556427269")).toBe(true);
   });
@@ -260,7 +260,7 @@ describe("Check phoneNrsAreEqualPrefix function", () => {
     expect(phoneNrsAreEqualPrefix("7556427269", "+7556427269")).toBe(true);
   });
 
-  //Zahranicne cisla s 2 cislom ako predvolbou
+  //Test for foreign phonenumbers whit 2 numbers in prefix
   it("Check prexif on landline number", () => {
     expect(phoneNrsAreEqualPrefix("0086556427269", "+86556427269")).toBe(true);
   });
@@ -269,7 +269,7 @@ describe("Check phoneNrsAreEqualPrefix function", () => {
     expect(phoneNrsAreEqualPrefix("6556427269", "+86556427269")).toBe(true);
   });
 
-  //Zahranicne cisla s 4 cislom ako predvolbou
+  //Test for foreign phonenumbers whit 4 numbers in prefix
   it("Check prexif on landline number", () => {
     expect(phoneNrsAreEqualPrefix("0011284556427269", "+1284556427269")).toBe(
       true
@@ -279,7 +279,7 @@ describe("Check phoneNrsAreEqualPrefix function", () => {
   it("Check prexif on landline number", () => {
     expect(phoneNrsAreEqualPrefix("4556427269", "+1284556427269")).toBe(true);
   });
-  //Zahranicne cisla mozu mat aj x v sebe tak este test aj s tym
+  //Test for foreign numbers whit 'x' in them
   it("Check prexif on landline number", () => {
     expect(phoneNrsAreEqualPrefix("1xx056556427269", "+86556427269")).toBe(
       true
@@ -287,4 +287,5 @@ describe("Check phoneNrsAreEqualPrefix function", () => {
   });
 });
 
-// ak testy s pomlckami bodkami medzerami... presli na slovenskych cislach, budu fungovat aj na zahranicnych cislach.
+
+//if the tests with dashed dots spaces ... pass on Slovak numbers, It will also work on foreign numbers.
