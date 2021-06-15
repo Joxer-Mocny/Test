@@ -5,7 +5,7 @@ Instalation
 
 npm install cypress
 
-if it is not working you can download it on there website : https://www.cypress.io/
+if it is not working you can download it on this website : https://www.cypress.io/
 
 Start the cypress aplication and click on select manualy, choose folder. It will make you and folder cypress and you have to put your test in "testfolder"/cypress/integration/examples.
 
