@@ -1,50 +1,65 @@
-//tato funkcia odstrani z telefonych cisel bodky, ciarky, medzery, pomlcky, podciarkovniky, lomitka,x a plus
+//funkcia na kontrolu cisiel bez predvolby
 const removeSpacesAndSpecials = (str) => {
-  return (str = str.replace(/\s+[ - _ / . , + x]/g, ""));
+  return str.replace(/\s+[ - _ / . , + x]/g, "");
 };
-//tato funkcia skontroluje poslednych 9 cisiel v telefonom cisle
-const phoneNrsAreEqual = (nr1, nr2) => {
-  return (
-    removeSpacesAndSpecials(nr1.substr(-8)) ===
-    removeSpacesAndSpecials(nr2.substr(-8))
-  );
-};
-// ak je poslednych devat cisel rovnakych skontroluje predvolbu (funguje len pre tel.cisl ktore maju predvolbu s troma cislami )
-const phoneNrsAreEqualPrefix = (nr1, nr2) => {
-  if ((phoneNrsAreEqual = true));
-  return (
-    removeSpacesAndSpecials(nr1.substr(-9, -10, -11)) ===
-    removeSpacesAndSpecials(nr2.subtr(-9, -10, -11))
-  );
-};
-  //ak je predvolba jedno cislo
-  const phoneNrsAreEqualPrefix1 = (nr1,nr2) => {
-    if(phoneNrsAreEqualPrefix = false);
-    return (
-      removeSpacesAndSpecials(nr1.substr( -10, )) ===
-      removeSpacesAndSpecials(nr2.subtr( -10, ))
-    );
-  };
-  //ak je predvolba dve cisla
-const phoneNrsAreEqualPrefix2 = (nr1,nr2) => {
-  if((phoneNrsAreEqualPrefix1 && phoneNrsAreEqualPrefix )  = false);
-  return (
-    removeSpacesAndSpecials(nr1.substr( -10, -11)) ===
-    removeSpacesAndSpecials(nr2.subtr( -10, -11))
-  );
-};
-  //ak je predvolba styri cisla
-  const phoneNrsAreEqualPrefix4 = (nr1,nr2) => {
-    if((phoneNrsAreEqualPrefix2 && phoneNrsAreEqualPrefix && phoneNrsAreEqualPrefix1 ) = false);
-    return (
-      removeSpacesAndSpecials(nr1.substr( -10, -11,-12,-13)) ===
-      removeSpacesAndSpecials(nr2.subtr( -10, -11, -12,-13))
-    );
-  };
 
-  // funkcie neriesia ani plus ani cisla ktore sa davaju miesto plus, lebo podla mojho vyskumu maju rovnake predvolby aj rovnake cislo miesto plus
+const areNumbersEqual = (nr1, nr2) => {
+  const numberWithoutSpecials1 = removeSpacesAndSpecials(nr1.substr(-8));
+  const numberWithoutSpecials2 = removeSpacesAndSpecials(nr2.substr(-8));
 
+  return numberWithoutSpecials1 === numberWithoutSpecials2;
+};
 
+//funkcia na kontrolu cisiel s predvolbou (1 cislo ako predvolba)
+const removeSpacesAndSpecials = (str) => {
+  return str.replace(/\s+[ - _ / . , + x]/g, "");
+};
+
+const areNumbersEqual = (nr1, nr2) => {
+  const numberWithoutSpecials1 = removeSpacesAndSpecials(nr1.substr(-9));
+  const numberWithoutSpecials2 = removeSpacesAndSpecials(nr2.substr(-9));
+
+  return numberWithoutSpecials1 === numberWithoutSpecials2;
+};
+
+//funkcia na kontrolu cisiel s predvolbou (2 cislo ako predvolba)
+const removeSpacesAndSpecials = (str) => {
+  return str.replace(/\s+[ - _ / . , + x]/g, "");
+};
+
+const areNumbersEqual = (nr1, nr2) => {
+  const numberWithoutSpecials1 = removeSpacesAndSpecials(nr1.substr(-11));
+  const numberWithoutSpecials2 = removeSpacesAndSpecials(nr2.substr(-11));
+
+  return numberWithoutSpecials1 === numberWithoutSpecials2;
+};
+
+//funkcia na kontrolu cisiel s predvolbou (3 cislo ako predvolba)
+const removeSpacesAndSpecials = (str) => {
+  return str.replace(/\s+[ - _ / . , + x]/g, "");
+};
+
+const areNumbersEqual = (nr1, nr2) => {
+  const numberWithoutSpecials1 = removeSpacesAndSpecials(nr1.substr(-12));
+  const numberWithoutSpecials2 = removeSpacesAndSpecials(nr2.substr(-12));
+
+  return numberWithoutSpecials1 === numberWithoutSpecials2;
+};
+
+//funkcia na kontrolu cisiel s predvolbou (4 cislo ako predvolba)
+
+const removeSpacesAndSpecials = (str) => {
+  return str.replace(/\s+[ - _ / . , + x]/g, "");
+};
+
+const areNumbersEqual = (nr1, nr2) => {
+  const numberWithoutSpecials1 = removeSpacesAndSpecials(nr1.substr(-13));
+  const numberWithoutSpecials2 = removeSpacesAndSpecials(nr2.substr(-13));
+
+  return numberWithoutSpecials1 === numberWithoutSpecials2;
+};
+
+//TEST
 
 //tento test skontroluje ci sa  cisla v zapise s bodkami, ciarkami, medzerami, pomlckami, podciarkovnikmi a lomitkami rovnaju.
 describe("Check phoneNrsAreEqual function", () => {
@@ -256,7 +271,9 @@ describe("Check phoneNrsAreEqualPrefix function", () => {
 
   //Zahranicne cisla s 4 cislom ako predvolbou
   it("Check prexif on landline number", () => {
-    expect(phoneNrsAreEqualPrefix("0011284556427269", "+1284556427269")).toBe(true);
+    expect(phoneNrsAreEqualPrefix("0011284556427269", "+1284556427269")).toBe(
+      true
+    );
   });
 
   it("Check prexif on landline number", () => {
@@ -264,7 +281,9 @@ describe("Check phoneNrsAreEqualPrefix function", () => {
   });
   //Zahranicne cisla mozu mat aj x v sebe tak este test aj s tym
   it("Check prexif on landline number", () => {
-    expect(phoneNrsAreEqualPrefix("1xx056556427269", "+86556427269")).toBe(true);
+    expect(phoneNrsAreEqualPrefix("1xx056556427269", "+86556427269")).toBe(
+      true
+    );
   });
 });
 
