@@ -46,7 +46,7 @@ const areNumbersEqual = (nr1, nr2) => {
   return numberWithoutSpecials1 === numberWithoutSpecials2;
 };
 
-//function for checking numbers with prefix (4 number and prefix)
+//function for checking equality of numbers with prefix (4 number and prefix)
 
 const removeSpacesAndSpecials = (str) => {
   return str.replace(/\s+[ - _ / . , + x]/g, "");

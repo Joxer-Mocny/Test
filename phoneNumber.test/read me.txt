@@ -1,0 +1,23 @@
+This test work on jets and it checks equality in phone numbers.
+
+
+
+Install Jest using yarn:
+
+yarn add --dev jest
+
+Or npm:
+
+npm install --save-dev jest
+
+
+
+start test
+
+run yarn test 
+or 
+npm run test
+
+for more info use this website :
+
+https://jestjs.io/docs/getting-started
