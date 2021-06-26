@@ -3,7 +3,7 @@ const removeSpacesAndSpecials = (str) => {
   return str.replace(/\s+[ - _ / . , + x]/g, "");
 };
 
-const areNumbersEqual = (nr1, nr2) => {
+const phoneNrsAreEqual = (nr1, nr2) => {
   const numberWithoutSpecials1 = removeSpacesAndSpecials(nr1.substr(-8));
   const numberWithoutSpecials2 = removeSpacesAndSpecials(nr2.substr(-8));
 
@@ -15,7 +15,7 @@ const removeSpacesAndSpecials = (str) => {
   return str.replace(/\s+[ - _ / . , + x]/g, "");
 };
 
-const areNumbersEqual = (nr1, nr2) => {
+const phoneNrsAreEqual = (nr1, nr2) => {
   const numberWithoutSpecials1 = removeSpacesAndSpecials(nr1.substr(-9));
   const numberWithoutSpecials2 = removeSpacesAndSpecials(nr2.substr(-9));
 
@@ -27,7 +27,7 @@ const removeSpacesAndSpecials = (str) => {
   return str.replace(/\s+[ - _ / . , + x]/g, "");
 };
 
-const areNumbersEqual = (nr1, nr2) => {
+const phoneNrsAreEqual = (nr1, nr2) => {
   const numberWithoutSpecials1 = removeSpacesAndSpecials(nr1.substr(-11));
   const numberWithoutSpecials2 = removeSpacesAndSpecials(nr2.substr(-11));
 
@@ -39,7 +39,7 @@ const removeSpacesAndSpecials = (str) => {
   return str.replace(/\s+[ - _ / . , + x]/g, "");
 };
 
-const areNumbersEqual = (nr1, nr2) => {
+const phoneNrsAreEqual = (nr1, nr2) => {
   const numberWithoutSpecials1 = removeSpacesAndSpecials(nr1.substr(-12));
   const numberWithoutSpecials2 = removeSpacesAndSpecials(nr2.substr(-12));
 
@@ -52,7 +52,7 @@ const removeSpacesAndSpecials = (str) => {
   return str.replace(/\s+[ - _ / . , + x]/g, "");
 };
 
-const areNumbersEqual = (nr1, nr2) => {
+const phoneNrsAreEqual = (nr1, nr2) => {
   const numberWithoutSpecials1 = removeSpacesAndSpecials(nr1.substr(-13));
   const numberWithoutSpecials2 = removeSpacesAndSpecials(nr2.substr(-13));
 
