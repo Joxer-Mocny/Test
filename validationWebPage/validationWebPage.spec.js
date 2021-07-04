@@ -34,7 +34,7 @@ describe("Test SK", () => {
 
     // check for successful modal popup
 
-    cy.get('div[id="modal-overlay-contact-us"]', { timeout: 20000 })
+    cy.get("#modal-overlay-contact-us", { timeout: 20000 })
       .should("have.attr", "style", "display: visible")
       .and("contains", "Ďakujem za vyplnenie žiadosti.");
   });
@@ -65,7 +65,7 @@ describe("Test SK", () => {
 
     cy.get("#contact-submit").click();
 
-    cy.get('div[id="modal-overlay-contact-us"]', { timeout: 20000 })
+    cy.get("#modal-overlay-contact-us", { timeout: 20000 })
       .should("have.attr", "style", "display: visible")
       .and("contains", "Ďakujem za vyplnenie žiadosti.");
   });
@@ -97,7 +97,7 @@ describe("Test SK", () => {
 
     cy.get("#contact-submit").click();
 
-    cy.get('div[id="modal-overlay-contact-us"]', { timeout: 20000 })
+    cy.get("#modal-overlay-contact-us", { timeout: 20000 })
       .should("have.attr", "style", "display: visible")
       .and("contains", "Ďakujem za vyplnenie žiadosti.");
   });
@@ -129,7 +129,7 @@ describe("Test SK", () => {
 
     cy.get("#contact-submit").click();
 
-    cy.get('div[id="modal-overlay-contact-us"]', { timeout: 20000 })
+    cy.get("#modal-overlay-contact-us", { timeout: 20000 })
       .should("have.attr", "style", "display: visible")
       .and("contains", "Ďakujem za vyplnenie žiadosti.");
   });
@@ -161,7 +161,7 @@ describe("Test SK", () => {
 
     cy.get("#contact-submit").click();
 
-    cy.get('div[id="modal-overlay-contact-us"]', { timeout: 20000 })
+    cy.get("#modal-overlay-contact-us", { timeout: 20000 })
       .should("have.attr", "style", "display: visible")
       .and("contains", "Ďakujem za vyplnenie žiadosti.");
   });
@@ -193,7 +193,7 @@ describe("Test SK", () => {
 
     cy.get("#contact-submit").click();
 
-    cy.get('div[id="modal-overlay-contact-us"]', { timeout: 20000 })
+    cy.get("#modal-overlay-contact-us", { timeout: 20000 })
       .should("have.attr", "style", "display: visible")
       .and("contains", "Ďakujem za vyplnenie žiadosti.");
   });
@@ -225,7 +225,7 @@ describe("Test SK", () => {
 
     cy.get("#contact-submit").click();
 
-    cy.get('div[id="modal-overlay-contact-us"]', { timeout: 20000 })
+    cy.get("#modal-overlay-contact-us", { timeout: 20000 })
       .should("have.attr", "style", "display: visible")
       .and("contains", "Ďakujem za vyplnenie žiadosti.");
   });
@@ -257,7 +257,7 @@ describe("Test SK", () => {
 
     cy.get("#contact-submit").click();
 
-    cy.get('div[id="modal-overlay-contact-us"]', { timeout: 20000 })
+    cy.get("#modal-overlay-contact-us", { timeout: 20000 })
       .should("have.attr", "style", "display: visible")
       .and("contains", "Ďakujem za vyplnenie žiadosti.");
   });
@@ -964,7 +964,7 @@ describe("Test EN", () => {
 
     // check for successful modal popup
 
-    cy.get('div[id="modal-overlay-contact-us"]', { timeout: 20000 })
+    cy.get("#modal-overlay-contact-us", { timeout: 20000 })
       .should("have.attr", "style", "display: visible")
       .and("contains", "Thank you for your request.");
   });
@@ -998,7 +998,7 @@ describe("Test EN", () => {
 
     // check for successful modal popup
 
-    cy.get('div[id="modal-overlay-contact-us"]', { timeout: 20000 })
+    cy.get("#modal-overlay-contact-us", { timeout: 20000 })
       .should("have.attr", "style", "display: visible")
       .and("contains", "Thank you for your request.");
   });
@@ -1032,7 +1032,7 @@ describe("Test EN", () => {
 
     // check for successful modal popup
 
-    cy.get('div[id="modal-overlay-contact-us"]', { timeout: 20000 })
+    cy.get("#modal-overlay-contact-us", { timeout: 20000 })
       .should("have.attr", "style", "display: visible")
       .and("contains", "Thank you for your request.");
   });
@@ -1066,7 +1066,7 @@ describe("Test EN", () => {
 
     // check for successful modal popup
 
-    cy.get('div[id="modal-overlay-contact-us"]', { timeout: 20000 })
+    cy.get("#modal-overlay-contact-us", { timeout: 20000 })
       .should("have.attr", "style", "display: visible")
       .and("contains", "Thank you for your request.");
   });
@@ -1099,7 +1099,7 @@ describe("Test EN", () => {
     cy.get("#contact-submit").click();
     // check for successful modal popup
 
-    cy.get('div[id="modal-overlay-contact-us"]', { timeout: 20000 })
+    cy.get("#modal-overlay-contact-us", { timeout: 20000 })
       .should("have.attr", "style", "display: visible")
       .and("contains", "Thank you for your request.");
   });
@@ -1133,7 +1133,7 @@ describe("Test EN", () => {
 
     // check for successful modal popup
 
-    cy.get('div[id="modal-overlay-contact-us"]', { timeout: 20000 })
+    cy.get("#modal-overlay-contact-us", { timeout: 20000 })
       .should("have.attr", "style", "display: visible")
       .and("contains", "Thank you for your request.");
   });
@@ -1167,7 +1167,7 @@ describe("Test EN", () => {
 
     // check for successful modal popup
 
-    cy.get('div[id="modal-overlay-contact-us"]', { timeout: 20000 })
+    cy.get("#modal-overlay-contact-us", { timeout: 20000 })
       .should("have.attr", "style", "display: visible")
       .and("contains", "Thank you for your request.");
   });
@@ -1201,7 +1201,7 @@ describe("Test EN", () => {
 
     // check for successful modal popup
 
-    cy.get('div[id="modal-overlay-contact-us"]', { timeout: 20000 })
+    cy.get("#modal-overlay-contact-us", { timeout: 20000 })
       .should("have.attr", "style", "display: visible")
       .and("contains", "Thank you for your request.");
   });
